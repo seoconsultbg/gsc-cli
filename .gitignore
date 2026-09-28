@@ -1,0 +1,36 @@
+# === Secrets — NEVER commit these ===
+client_secrets.json
+credentials.json
+*.secret.json
+oauth/
+.config/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# === Tooling caches ===
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# === Generated analysis artifacts (data dumps / reports) ===
+*_data.json
+*_report.txt
+audit_*.json
+canib_*.json
+cannibal_*.json
+cmp_*.json
+kd_*.json
+opp_*.json
+sd_*.json
+seoopt_*.json
+
+# === Internal working docs (not for publication) ===
+PROMOTION.md

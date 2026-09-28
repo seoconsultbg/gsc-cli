@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "SEO Search Analytics Benchmarks",
+  "version": "1.0.0",
+  "updated": "2026-07",
+  "description": "Open reference dataset of Google Search Console / organic-search benchmarks: expected click-through rate by ranking position, position bands, and indexing-health thresholds. Maintained alongside gsc-cli.",
+  "source": "gsc-cli",
+  "homepage": "https://seoconsult.bg",
+  "repository": "https://github.com/marg-cmok/gsc-cli",
+  "license": "CC-BY-4.0",
+  "attribution": "Data by SEO Consult (https://seoconsult.bg), CC BY 4.0. Attribution required.",
+  "ctr_by_position": {
+    "unit": "fraction",
+    "note": "Expected organic CTR for web results. Values materially below the band for a position indicate a title/meta opportunity.",
+    "values": {
+      "1": 0.28,
+      "2": 0.15,
+      "3": 0.11,
+      "4": 0.08,
+      "5": 0.06,
+      "6": 0.045,
+      "7": 0.035,
+      "8": 0.03,
+      "9": 0.025,
+      "10": 0.02
+    }
+  },
+  "position_bands": [
+    { "min": 1, "max": 3, "label": "top", "action": "Defend; monitor for volatility." },
+    { "min": 4, "max": 10, "label": "first_page", "action": "Improve CTR vs. band (title/meta) to lift clicks." },
+    { "min": 11, "max": 20, "label": "striking_distance", "action": "Prime quick-win zone: small gains push to page 1." },
+    { "min": 21, "max": null, "label": "deep", "action": "Needs content/authority investment or consolidation." }
+  ],
+  "quick_wins": {
+    "striking_distance": "Queries at position 11-20 with high impressions.",
+    "low_ctr_page_one": "Queries at position 4-10 with CTR below the expected band."
+  },
+  "cannibalization": {
+    "rule": "One query served by >= 2 URLs, each with meaningful impressions, that split authority and CTR.",
+    "min_urls": 2
+  },
+  "indexing_health": {
+    "stale_crawl_days": 30,
+    "not_indexed_states": [
+      "Crawled - currently not indexed",
+      "Discovered - currently not indexed"
+    ],
+    "note": "A 'not indexed' coverage state on a top page is a priority issue."
+  },
+  "caveats": {
+    "data_lag_days": 3,
+    "note": "GSC data is delayed ~2-3 days; always state the analysis window."
+  }
+}
