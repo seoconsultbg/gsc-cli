@@ -25,6 +25,12 @@ The `INSPECTION_URL` must belong to the property (`SITE_URL`).
 2. Read `verdict` (`PASS`/`NEUTRAL`/`FAIL`) and `coverage_state`.
 3. If not indexed, look at `robots_txt_state`, `page_fetch_state`, `indexing_state`,
    and whether `google_canonical` differs from `user_canonical`.
+4. If `google_canonical` is on a **different, unrelated domain**, suspect a broken
+   render before a hijack (added 2026-09-28, J. Mueller via SEJ 18.09.2026): pages
+   that served a generic JavaScript error shell to Googlebot look identical to every
+   other site showing that shell, so Google folds them together and may pick any of
+   those URLs. Ask for the GSC live URL test screenshot / rendered HTML; the fix is
+   the render error, not the canonical tag.
 
 ## Presentation
 

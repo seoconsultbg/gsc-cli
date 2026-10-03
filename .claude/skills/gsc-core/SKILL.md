@@ -179,6 +179,16 @@ collapsing AI/organic ratio is an early crawl-access alarm. Method: iamveru.com 
 travel site, Jun-Jul 2026, 891 URLs: AI impressions 0.35% at pos 1-3, 69.2% at 4-10,
 23.5% at 11-20, 6.9% at 21+; every top-100 AI URL was in the organic top 1,000).
 
+## History beyond 16 months: archive it yourself
+
+(added 2026-10-01; Marco Giordano, "LLM & SEO Automation in 2026", Belgrade 09.2026.) Search
+Console keeps 16 months and the API returns only that window, so year-over-year past 16 months
+and any long trend is gone unless it was saved. For every retained client: either switch on the
+GSC bulk export to BigQuery in the property settings (owner action, daily tables, query rows
+still anonymised the same way) or run a monthly `gsc --format json query` dump per site
+(`-d date,page,query`, paginated with `--row-limit 25000 --start-row`) into the client folder.
+Start on day one of the contract - history cannot be backfilled later.
+
 ## SEO benchmarks (use consistently across skills)
 
 - **Position bands:** 1–3 top; 4–10 first page; **11–20 striking distance** (the

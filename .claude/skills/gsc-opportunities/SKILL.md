@@ -160,6 +160,15 @@ wording but not high-CTR wording is a downgrade.
 Exclude the machine-issued set (previous section) before weighting - synthetic
 queries have near-zero CTR by construction and will drag the intent toward noise.
 
+**Stray-term vacuum** (added 2026-09-30, T. Kubaitis, SEO Fight Club). When a page
+that is well tuned for its target barely shows for it, list its queries: if most
+impressions sit on one off-topic term, a single incidental mention (a brand name in
+a table cell, a tool name, a side product) may have pulled the page into a query with
+demand but thin content. His page on "top SEO factors" got only "SEMrush" queries from
+one data-source mention; removing that mention moved it up for the target. Fix: move
+the stray term to a page that deserves it, then recheck in 2-4 weeks. Rare, but cheap
+to check - one query export per page.
+
 ## Live-page grounding (MANDATORY before suggesting changes)
 
 Before recommending any title/meta/heading change, WebFetch the affected pages
@@ -172,6 +181,14 @@ H1 and H2 list. Then:
   effective, no change needed" — that is a valid and valuable finding.
 - Title rewrites are shown side by side: current title -> suggested title, with a
   one-line reason (missing keyword / missing year / no hook / too long).
+- "Too long" alone is not a reason (added 2026-09-29, after P. A. de Vera: a
+  single-variable test on 900 pages with full-sentence, direct-response titles past
+  60 characters - traffic +200%, 2,000 -> 9,000 visits, but real sales only +20%).
+  Two rules follow: (1) front-load what qualifies the buyer (model, price, city,
+  "buy"/"cost") so truncation cuts the hook, not the intent; (2) a hook title can
+  pull readers who were never going to buy - judge a title change by leads /
+  orders from GA4 or the CRM for those pages, not by clicks, and say so when you
+  propose it.
 
 Suggestions not grounded in the fetched page state are guesses — do not present them.
 
