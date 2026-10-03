@@ -6,7 +6,7 @@
   "description": "Open reference dataset of Google Search Console / organic-search benchmarks: expected click-through rate by ranking position, position bands, and indexing-health thresholds. Maintained alongside gsc-cli.",
   "source": "gsc-cli",
   "homepage": "https://seoconsult.bg",
-  "repository": "https://github.com/marg-cmok/gsc-cli",
+  "repository": "https://github.com/stenliseo/gsc-cli",
   "license": "CC-BY-4.0",
   "attribution": "Data by SEO Consult (https://seoconsult.bg), CC BY 4.0. Attribution required.",
   "ctr_by_position": {

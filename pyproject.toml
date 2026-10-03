@@ -43,9 +43,9 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://seoconsult.bg"
-Documentation = "https://github.com/marg-cmok/gsc-cli#readme"
-Repository = "https://github.com/marg-cmok/gsc-cli"
-Issues = "https://github.com/marg-cmok/gsc-cli/issues"
+Documentation = "https://github.com/stenliseo/gsc-cli#readme"
+Repository = "https://github.com/stenliseo/gsc-cli"
+Issues = "https://github.com/stenliseo/gsc-cli/issues"
 
 [project.scripts]
 gsc = "gsc.cli.main:cli"
