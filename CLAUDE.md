@@ -35,7 +35,8 @@ src/gsc/
     inspect_cmd.py   # `gsc inspect`
     multimodal.py    # `gsc multimodal` (UI export of Web: multimodal; not in the API)
     genai.py         # `gsc genai` (UI export of the Generative AI report + AI lift index)
-.claude/skills/      # one SKILL.md per skill (see below)
+.claude-plugin/      # marketplace.json, so `/plugin marketplace add` finds the plugin
+plugins/gsc-cli/     # the Claude Code plugin: .claude-plugin/plugin.json + skills/
 ```
 
 ## Three-layer architecture
@@ -47,7 +48,7 @@ src/gsc/
    `ctx.obj`; each data command sets `ctx.obj["site_url"]`, builds a client via
    `get_client(ctx)`, flattens the returned dataclass to plain dicts, and calls
    `format_output`.
-3. **Claude Code skills** (`.claude/skills/`) — markdown files that invoke
+3. **Claude Code skills** (`plugins/gsc-cli/skills/`) — markdown files that invoke
    `gsc --format json <command>` and analyze the JSON. They never touch the
    Google API directly. `gsc-core` is an always-loaded reference; the rest are
    user-triggered.
@@ -94,5 +95,3 @@ OAuth login always requests read-write scope. For service accounts,
   lags ~2–3 days).
 - Python 3.11+, `from __future__ import annotations` in every module, full type
   hints. Lint/format with `ruff` (line-length 100): `uv run ruff check .`.
-
-<!-- hyperresearch:start -->

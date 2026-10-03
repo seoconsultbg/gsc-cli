@@ -10,6 +10,14 @@ Shared reference for every `gsc-*` skill. The `gsc` binary is the only way these
 skills reach Google Search Console — always call it with `--format json` and parse
 the result. `--format` is **global** and comes *before* the subcommand.
 
+## If `gsc` is not found
+
+Inside the gsc-cli project itself, call it as `uv run gsc ...`. Anywhere else, ask
+the user to install it (`uv tool install gsc-cli` or `pipx install gsc-cli`), set
+`GSC_CLIENT_SECRETS` to their OAuth `client_secrets.json` and run `gsc auth login`
+once. Without a local shell (claude.ai chat) these skills cannot run: say so and
+point the user to Claude Code instead of estimating numbers.
+
 ## Date convention
 
 GSC data lags ~2–3 days, so treat **end date = today − 3 days**. A "last 28 days"

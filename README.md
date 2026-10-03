@@ -102,9 +102,17 @@ from a larger private setup. They are optional; the `gsc-*` skills work on their
 ## Use with Claude Code
 
 `gsc-cli` is the backend for a suite of Claude Code SEO skills (performance
-overviews, cannibalization detection, quick-win opportunities, period compares).
-The skills shell out to `gsc --format json` and reason over the output - see
-[CLAUDE.md](CLAUDE.md) for the architecture.
+overviews, cannibalization detection, quick-win opportunities, period compares,
+indexing audits). The skills shell out to `gsc --format json` and reason over the
+output. They ship as a Claude Code plugin in [`plugins/gsc-cli`](plugins/gsc-cli):
+
+```
+/plugin marketplace add seoconsultbg/gsc-cli
+/plugin install gsc-cli@seoconsult
+```
+
+The plugin needs the `gsc` command on your PATH (`uv tool install gsc-cli` or
+`pipx install gsc-cli`). See [CLAUDE.md](CLAUDE.md) for the architecture.
 
 ## Configuration
 

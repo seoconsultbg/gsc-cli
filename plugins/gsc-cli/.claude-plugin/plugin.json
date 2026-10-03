@@ -1,0 +1,24 @@
+{
+  "name": "gsc-cli",
+  "displayName": "GSC CLI",
+  "version": "0.2.0",
+  "description": "Google Search Console analysis skills for Claude Code: performance overviews, period compares, cannibalization, quick wins, indexing audits and AI Mode query residue. Runs the open-source gsc CLI on your machine.",
+  "author": {
+    "name": "SEO Consult",
+    "url": "https://seoconsult.bg"
+  },
+  "homepage": "https://github.com/seoconsultbg/gsc-cli#readme",
+  "repository": "https://github.com/seoconsultbg/gsc-cli",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "google-search-console",
+    "search-analytics",
+    "url-inspection",
+    "sitemaps",
+    "cannibalization",
+    "ai-overviews"
+  ],
+  "documentationUrl": "https://github.com/seoconsultbg/gsc-cli#readme",
+  "supportUrl": "https://github.com/seoconsultbg/gsc-cli/issues"
+}
